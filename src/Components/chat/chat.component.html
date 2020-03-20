@@ -1,0 +1,37 @@
+
+
+<div #dialog class="chatBox" [scrollTop]="dialog.scrollHeight" *ngIf="authSv.isLoggedIn" [@showTrigger]="'show'">
+
+
+    <div class="dialog">
+      <div *ngFor="let message of messages" [class.OwnMessageCont]="authSv.user.displayName === message.sender"
+           [class.MessageCont]="authSv .user.displayName !== message.sender">
+        <app-message class="messagecontent" [message]="message"></app-message>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="inputBox" *ngIf="authSv.isLoggedIn">
+      <form class="chatForm" [formGroup]="chatForm">
+
+          <mat-form-field class="example-full-width">
+            <mat-label>Type Your Message....</mat-label>
+            <input formControlName="message" matInput #message maxlength="256" autocomplete="off"
+                   placeholder="Ex. I need help with...">
+            <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+          </mat-form-field>
+
+          <button mat-button (click)="onSubmit()" [disabled]="chatForm.get('message').value === ''">Ուղարկել</button>
+      </form>
+    </div>
+
+
+
+
+<div class="PleaseLogIn" *ngIf="!authSv.isLoggedIn">
+  <p>Սիրելի Ընկեր խնդրում ենք մուտք գործել, շարունակելու համար
+  Եթե չունեք հաշիվ, խնդրում ենք գրանցվել</p>
+  <app-login [navigateTo]="'/home/groupchat'"></app-login>
+
+</div>

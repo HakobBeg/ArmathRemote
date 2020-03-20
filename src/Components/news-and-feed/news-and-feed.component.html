@@ -1,0 +1,32 @@
+<div class="PostContent" [@showTrigger]="'show'">
+
+  <div class="PostInput" [@inputHandlerAnimation]="state" *ngIf="state==='opened'" >
+    <form [formGroup]="postForm" >
+      <mat-form-field appearance="outline">
+        <mat-label>Մուտքագրեք գրառման վերնագիրը</mat-label>
+            <input formControlName="title" matInput autocomplete="off" placeholder="'Օռինակ․ ՛Աղվես․ Շարժման հրամաններ։՛'">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Մուտքագրեք ձեր գրառումը</mat-label>
+        <textarea formControlName="content" matInput autocomplete="off" placeholder="'Օռինակ․ ՝Ինչպե՞ս պահպանել Աղվեսի պռոեկտը։՝'"></textarea>
+      </mat-form-field>
+
+        <button class="post" (click)="onPostSubmit()" mat-button>Հրապարակել գրառումը</button>
+    </form>
+
+  </div>
+
+
+  <button mat-button [disabled]="!authSv.isLoggedIn"  (click)="stateHandler()">{{(authSv.isLoggedIn)?(this.state === 'opened') ? 'Չեղարկել' : 'Նոր հրապարակում': 'Խնդրում ենք մուտք գործել, գրառում կատարելու համար'}}</button>
+
+  <div   class="PostsBox">
+
+    <div *ngFor="let currentPost of posts">
+      <app-post [post]="currentPost"></app-post>
+    </div>
+
+  </div>
+
+
+</div>

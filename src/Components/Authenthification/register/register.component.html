@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-title>Գրանցվել</mat-card-title>
+<form [formGroup]="regForm" >
+  <mat-form-field appearance="outline">
+    <mat-label>Էլ․ Հասցե</mat-label>
+    <input formControlName="email" autocomplete="off" matInput placeholder="example@mail.ru">
+    <mat-icon matSuffix>mail</mat-icon>
+  </mat-form-field>
+  <p *ngIf="regForm.get('email').invalid && regForm.get('email').touched" class="NonValidP" >Խնդրում ենք մուտքագրել ճիշտ էլ․ հասցեն։</p>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Անուն</mat-label>
+    <input formControlName="firstName"  matInput >
+  </mat-form-field>
+  <p *ngIf="regForm.get('firstName').invalid && regForm.get('firstName').touched" class="NonValidP" >Ի՞նչ է ձեր անունը։</p>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Ազգանուն</mat-label>
+    <input formControlName="lastName" matInput >
+  </mat-form-field>
+  <p *ngIf="regForm.get('lastName').invalid && regForm.get('lastName').touched" class="NonValidP" >Ի՞նչ է ձեր ազգանունը։</p>
+
+
+  <mat-form-field appearance="outline">
+    <mat-label>Մուտքագրեք գաղտնաբառը</mat-label>
+    <input formControlName="password" type="password"  matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Հաստատեք գաղտաբառը</mat-label>
+    <input formControlName="repPassword" type="password" matInput >
+  </mat-form-field>
+  <p class="NonValidP" *ngIf="regForm.get('password').value !== regForm.get('repPassword').value && regForm.get('repPassword').touched">Գաղտնաբառերը չեն համապատասխանում։</p>
+
+
+  <button class="bt" [disabled]="regForm.invalid" mat-button (click)="onSubmit()">Գրանցվել</button>
+  <label (click)="this.authService.router.navigate(['auth/login'])">Արդեն ունե՞ք հաշիվ։</label>
+  <button mat-button [routerLink]="'/home'"><mat-icon>home</mat-icon></button>
+</form>
+
+</mat-card>

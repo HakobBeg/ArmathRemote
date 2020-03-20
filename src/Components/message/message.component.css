@@ -1,0 +1,15 @@
+.message{
+  width: 100%;
+  height: auto;
+  margin-top: 3%;
+}
+
+.message mat-card{
+  background-color: rgba(59, 59, 118, 0.57);
+  color: white;
+
+}
+label{
+  color: rgba(230,230,230,0.41);
+}
+

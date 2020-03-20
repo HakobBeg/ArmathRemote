@@ -1,0 +1,61 @@
+mat-toolbar {
+  background-color: rgba(97, 112, 209, 0.51);
+  display: flex;
+  position: fixed;
+  top: 0;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100vw;
+  height: 8%;
+  transform: translateX(-100%);
+  user-select: none;
+}
+
+.LoggedContent button {
+  background-color: rgba(191, 0, 149, 0.76);
+}
+
+.NotLogged {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Logged {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+mat-toolbar label {
+  color: whitesmoke;
+}
+
+mat-toolbar label:hover {
+  background-color: #6170d1;
+  transform: scale(1.7);
+  color: #fff;
+}
+
+mat-toolbar mat-icon:hover {
+  background-color: #6170d1;
+  transform: scale(1.7);
+  color: #fff;
+}
+
+.signButton {
+  background-color: rgba(182, 182, 182, 0.17);
+}
+
+mat-toolbar label:focus {
+  background-color: #494991;
+  border-radius: 9px;
+  outline: none;
+}
+
+
+.home {
+  width: 50px;
+  height: 50px;
+  background-image: url("../../assets/Արմաթ-02.png");
+}

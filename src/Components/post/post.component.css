@@ -1,0 +1,15 @@
+.Post {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 50px;
+
+}
+
+.Post label {
+  color: whitesmoke;
+}
+
+.Post mat-card {
+  background-color: rgba(97, 112, 209, 0.52);
+}

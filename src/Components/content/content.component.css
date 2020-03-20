@@ -1,0 +1,15 @@
+.ContentBox{
+  width: 70%;
+  position: fixed;
+  margin-left: 15%;
+  margin-right: 15%;
+  height: 70%;
+background-color: rgba(232, 232, 232, 0.53);
+  margin-top: 8%;
+  border-radius: 13px;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 50px;
+
+}

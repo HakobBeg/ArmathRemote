@@ -1,0 +1,32 @@
+
+
+<mat-toolbar [@navAnimateTrigger] = "'fullSc'">
+ <label class="home" [routerLink]="'/home'"></label>
+  <label [routerLink]="'/home/newsfeed'">Թարմացումներ</label>
+  <label [routerLink]="'/home/problems'">Խնդիրներ</label>
+  <label [routerLink]="'/home/groupchat'">Խմբային չատ</label>
+  <label [routerLink]="'/info'">Ինֆո</label>
+
+
+
+
+
+
+
+
+  <div class="NotLogged" *ngIf="!authService.isLoggedIn">
+    <button mat-button class="signButton" [routerLink]="'/auth/login'">Մուտք</button>
+    <button mat-button  [routerLink]="'/auth/register'" style="background-color:  #6170d1; color: whitesmoke; margin-left: 4%">Գրանցվել</button>
+
+
+  </div>
+
+  <div *ngIf="authService.isLoggedIn" class="Logged">
+    <div class="LoggedContent">
+    </div>
+    <p style="color: whitesmoke; margin-right: 3%;padding-top: 10px">{{(authService.user===undefined)?'':authService.user.displayName}}</p>
+    <button (click)="authService.logout()" style="background-color: #8442B0;color: rgba(244,255,245,0.77)" mat-button>Դուրս գալ</button>
+
+  </div>
+
+</mat-toolbar>

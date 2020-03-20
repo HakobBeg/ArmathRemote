@@ -1,0 +1,22 @@
+<mat-card>
+  <mat-card-title>Մուտք</mat-card-title>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Մուտքանում</mat-label>
+    <input [(ngModel)]="login" autocomplete="off" matInput placeholder="Amigo">
+    <mat-icon matSuffix>mail</mat-icon>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Գաղտնաբառ</mat-label>
+    <input [(ngModel)]="pass" matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <button class="bt" mat-button (click)="signIn()">Մուտք Գործել</button>
+  <label  (click)="this.authService.router.navigate(['auth/register'])">Դեռ չունե՞ք հաշիվ։</label>
+  <button mat-button [routerLink]="'/home'"><mat-icon>home</mat-icon></button>
+</mat-card>

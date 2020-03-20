@@ -1,0 +1,108 @@
+.chatBox {
+  background-image: linear-gradient(to right top, rgba(70, 147, 224, 0.47), rgba(81, 130, 218, 0.47), rgba(97, 112, 209, 0.47), rgba(115, 91, 195, 0.47), #8442b0);
+  width: 100%;
+  height: 90%;
+  border-radius: 13px;
+  padding: 10px;
+  opacity: 0;
+}
+
+
+.chatBox{
+  overflow-y: scroll;
+}
+
+.chatBox::-webkit-scrollbar {
+  display: none;
+}
+
+
+.inputBox {
+  background-image: linear-gradient(to right top, rgba(70, 147, 224, 0.47), rgba(81, 130, 218, 0.47), rgba(97, 112, 209, 0.47), rgba(115, 91, 195, 0.47), #8442b0);
+  width: 98%;
+  height: 8%;
+  margin-top: 1%;
+  border-radius: 13px;
+padding: 10px;
+}
+
+.chatForm{
+  height: 80%;
+  width: 100%;
+}
+
+.chatForm mat-form-field{
+  width: 80%;
+  height: 80%
+}
+
+
+.chatForm mat-form-field input{
+  max-height: 70px;
+  color: whitesmoke;
+}
+
+.chatForm button{
+  /*margin-left: 30px;*/
+
+  width: 15%;
+  margin-left: 3% ;
+  background-color: #6170d1;
+  color: whitesmoke;
+}
+
+.OwnMessageCont{
+  width: 40%;
+  margin-left: 60%;
+}
+
+.MessageCont{
+  width: 40%;
+
+}
+
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: whitesmoke !important;
+  font-size: 120%;
+}
+.mat-form-field mat-label{
+  color: rgba(230,230,230,0.41);
+  font-size: 130%;
+  font-family: Tahoma;
+}
+
+::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: rgba(123, 184, 195, 0.64) !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: whitesmoke !important;;
+}
+
+
+.PleaseLogIn{
+  width: 100%;
+}
+
+.PleaseLogIn p{
+  font-size: 150%;
+  color: whitesmoke;
+  text-align: center;
+  top: 100px;
+}
+
+
+.action button{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  background-color: #6170d1;
+  margin-top: 40px;
+
+}
+
+

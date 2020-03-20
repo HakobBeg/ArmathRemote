@@ -1,0 +1,93 @@
+
+.PostContent
+{
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  background-color: #8983c3;
+  opacity: 0;
+}
+
+
+.PostContent::-webkit-scrollbar{
+  display: none;
+}
+
+.PostInput{
+  height: 0;
+  width: 100%;
+  background-color: #8983c3;
+}
+
+.PostContent button{
+  width: 100%;
+  background-color: #8983c3;
+}
+
+.PostsBox{
+  width: 100%;
+  height: 100%;
+  background-color:  rgba(232, 232, 232, 0.29);
+}
+
+
+.PostInput form{
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+.post{
+  background-color: rgba(232, 232, 232, 0.29);
+color: white;
+}
+
+mat-form-field{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 40px;
+}
+
+.PostInput input{
+  width: 100%;
+  color: whitesmoke;
+
+}
+
+.PostInput textarea{
+  color: whitesmoke;
+  max-height: 100px;
+}
+
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: whitesmoke !important;
+  font-size: 120%;
+}
+.mat-form-field mat-label{
+  color: rgba(230,230,230,0.41);
+  font-size: 130%;
+  font-family: Tahoma;
+}
+
+::ng-deep.mat-form-field-outline {
+  /*change color of underline*/
+  background-color: rgba(59, 59, 118, 0.32) !important;
+}
+
+::ng-deep.mat-form-field-ripple {
+  /*change color of underline when focused*/
+  background-color: whitesmoke !important;;
+}
+
+.PostsBox{
+  overflow-y: scroll;
+}
